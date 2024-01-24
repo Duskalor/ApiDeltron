@@ -11,6 +11,9 @@ app.use(cors());
 app.use(helmet());
 app.use(morgan('common'));
 
+app.get('/', async (req, res) => {
+  res.json('Hola a todos esta es la Api de Deltron');
+});
 app.use('/productos', router);
 
 connectedDB().then(() => {
