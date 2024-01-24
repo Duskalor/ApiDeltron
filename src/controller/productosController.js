@@ -1,7 +1,7 @@
 import { productosModel } from '../model/productosModel.js';
 
 export const getAllDiscos = async (req, res) => {
-  const Alldata = await productosModel.find({ categoria: 'disco' });
+  const Alldata = await productosModel.find({ categoria: 'Disco' });
   console.log(Alldata);
   res.json(Alldata);
 };
