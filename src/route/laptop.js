@@ -1,7 +1,10 @@
 import { Router } from 'express';
-import { getAllLaptop } from '../controller/productosController.js';
+import {
+  GenerateExcelLaptops,
+  getAllLaptop,
+} from '../controller/productosController.js';
 const router = Router();
 
 router.get('/', getAllLaptop);
-
+router.get('/excel', GenerateExcelLaptops);
 export { router };

@@ -1,7 +1,7 @@
 import { connect } from 'mongoose';
-
-const connectUrl = process.env.URL;
+import 'dotenv/config.js';
+const connectURI = process.env.DB_URI;
 
 export const connectedDB = async () => {
-  return await connect(connectUrl);
+  return await connect(connectURI);
 };
